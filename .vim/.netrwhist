@@ -1,0 +1,7 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =5
+let g:netrw_dirhist_1='/vidyard/Blockbuster'
+let g:netrw_dirhist_2='/vidyard/Blockbuster/node_modules'
+let g:netrw_dirhist_3='/vidyard/Blockbuster'
+let g:netrw_dirhist_4='/vidyard/Blockbuster/src'
+let g:netrw_dirhist_5='/vidyard/Blockbuster/src/components'

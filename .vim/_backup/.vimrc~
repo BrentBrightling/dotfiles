@@ -23,7 +23,7 @@ call vundle#end()            " required
 filetype plugin indent on    " required
 syntax enable
 
-colorscheme luna-term
+colorscheme srcery
 
 " Move swap files
 set dir=~/.vim/_swap/
