@@ -1,0 +1,128 @@
+# Estimating totals
+
+If we can estimate the CDF then we can estimate the median.
+Therefore we can write any quantile as a sum.
+
+## How do I estimate?
+
+We have a group of estimates called __Horvitz-Thompson estimate__
+
+To estimate $\alpha(P) = \sum_{u\in P} y_u$, we use:
+
+$$\hat{\alpha}(P) = \alpha_{HT}(p) = \sum_{u\in S}\frac{y_u}{\pi_u}$$
+
+HT is an unbiased estimator. Proof:
+
+$$\alpha_{HT}= \sum_{u\in S} \frac{y_u}{\in_u}=\sum_{u\in P} D(u)\frac{y_u}{\pi_u}$$
+
+where
+
+$$D(u) = 1 if u \in S, 0 otherwise$$
+
+The random variable here is D(u). 
+The distribution of D(u) is Bernoulli($\pi_u$) (where $\pi_u$ is the probability of inclusion.
+
+$$E(D(u)) = 0 x P(D(u)=0) + 1 x P(D(u)=1) = \pi_u$$
+$$Var(D(u)) = E(D(u)^2) - [E(D(u))]^2 = ____ = \pi_u(1-\pi_u)$$
+
+$$e(a_{HT}(s)) = E(\sum_{u\in P} D(u) \frac{y_u}{\pi_u}) = \sum_{u\in P}E(D(u))\frac{y_u}{\pi_u}$$
+$$= \sum_{u\in P}y_u \rightarrow E(a_{HT}(s)) = \sum_{u\in P}$$
+
+so, $a_{HT}(s)$ is unbiased for $\sum_{u\in P} y_u$
+
+$$Var(a_{HT}(s)) = E(a_{HT}(s)^2) - [E(a_{HT}(s))]^2 = E[(\sum_{u\in P} \frac{y_u}{\pi_u})^2] - E(\sum_{u\in P} \frac{y_u}{\pi_u})E(\sum_{u\in P} \frac{y_u}{\pi_u})$$
+
+
+Simple Random Sampling: Sampling with replacement.
+
+$$\pi_u = \frac{{N-1 \choose n-1}}{{N \choose n}}= \frac{n}{N}$$
+
+
+Variance of HT estimator is in the form of a sum, so it can be estimated using a HT estimator.
+
+$$\sum_{u\in P} y_u \rightarrow \sum_{u\in S} \frac{y_u}{\pi_u}$$
+
+Parameters attribute -> estimator of rv -> SF of the estimator -> estimate of the SD: estimate of SD = std error
+
+Standard error is the estimate of the std deviation of the corresponding estimator 
+
+## Sampling Distribution of the HT estimates (average)
+
+- The code is in the slides for how we generated the histogram, we couldn't do the sample size that would be recommended because it would create too many options.
+- We know that HT is unbiased so any errors would be due to the sample not the distribution.
+- In the slides we have comparisons between the normal distribution and HT, normal is blue, HT is black
+
+If we take a full sample of HT values, say 10000 of them, we can take the first 250, and the last 250, then we have Q(0.025) and Q(0.975).
+Therefore the probability $P(Q(0.025) \leq \overline{\alpha}_{HT}(S) \leq Q(0.975))=95\%$
+
+In the slides we see an equation for how to approximate the distribution using the normal distribution.
+
+### Theory of Confidence intervals
+
+From stat230/231: $\overline{x} ~ N(\mu, \frac{\sigma^2}{n})$
+
+$$p(\mu-1.96(\sigma/\sqrt{n}) \leq \overline{X} \leq \mu + 1.96(\sigma/\sqrt{n})) = 95\%$$
+
+$$\rightarrow P(\overline{X} - 1.96 (\sigma/\sqrt{n}) \leq \mu \leq \overline{X}+1.96(\sigma/\sqrt{n})) = 95\%$$
+
+## Sampling Distribution of the HT estimates (proportion)
+
+Proportion in sharks data:
+
+1. Fatality: proportion of fatal encounters 
+2. Scuba: proportion of encounters that happened with a scuba diver
+3. Length: proportion of encounters with shark length less than or equal to 180
+    - Taking a range from 0 to x where x is the value in which we set as our max
+
+- These graphs are:
+    - Discrete 
+    - Never use normal approx on HT, unless you have reason to believe it's normally distributed
+    - We are going to learn bootstrap methods to improve these
+
+## Regression Example
+
+- In this example, we show how sampling design can affect the precision of estimation
+- In particular, how it affects the estimation of the coefficients of a simple linear regression
+- Note that this example does not use HT estimator and only focuses on sampling design
+
+We take all samples of size 3
+
+$y=\alpha + \beta x$
+
+y=lob(brain weight)
+x=log(body weight)
+
+63 point in population
+
+63 C 3 possible samples of size 3
+
+We can see that for alpha, and beta have high concentrations but high variability.
+
+We can get a somewhat better picture by making a scatter plot of alpha vs beta
+
+__Sample Size 6__
+
+63 C 6 - We are going to use 10000 points from this
+
+We can see in the slides that the greater our sample size is, the more concentrated it becomes.
+
+## Stratified Sampling
+
+Divide the population into H strata such that the differences within each stratum is negligible, but between strata the difference is significant.
+
+Within your particular groups, there won't be much variability, but from group to group there is a larger variability.
+
+We take n_h samples from stratum h which has N_h units.
+
+The sample of size $n=n_1 + n_2 + n_3 + n_4 + ... + n_h$ from $N=N_1 + N_2 + ....+ N_H$ is called a stratified sample.
+
+We are going to find the median and split our samples into two groups, one larger, and one smaller than the median
+
+Within each stratum, a simple random sample without replacement is chosen.
+
+We can see that as we increase strata size we get a more and more accurate strata
+
+For example when we are looking at farming data, even as an educated person about farming sizes, we can strata based on what provinces.
+
+Using strata only makes sense when you can distinguish your data into distinct groups where the individual groups are homogeneous, but the differences between the groups is heterogeneous.
+

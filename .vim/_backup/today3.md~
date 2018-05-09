@@ -1,0 +1,86 @@
+# Bootstrap Variations
+
+- Estimation of population CDF
+- Parametric bootstrap vs non-parametric bootstrap
+- Bootstrap in regression
+
+Samples from a sample of a population can be shown to represent samples from a population
+
+We are taking the sample to be an estimate of the population
+
+Taking a sample depends on the density function in which we define. 
+We can show that f(x) and F(x) uniquely define each other in terms of probabilities.
+
+Any variate is a random variable therefore has a CDF, F(x), which is a population
+
+Population = F(x)
+Sample = $\hat{F}(x)$ = proportion of units in sample $\leq$ x
+
+Sample from population means generate data from F(x)
+
+Bootstrap -> sample from sample means generate data from $\hat{F}(x)$ 
+
+$\hat{F}(x)$ has to come from something like HT
+
+__Note:__ Majority of methods to estimate F(x) give good estimates if sample is a good representation of population, so $\hat{F}(x)$ is a good representation of F(x).
+As n gets larger, $\hat{F}(x) \text{ converges to } F(x)$
+
+## Estimate for F
+
+Example: say we have a population of 1000 people, and we take a sample of 20 people.
+If we don't say anything more, we are going to do a bootstrap sample from the sample of 20 people.
+
+However, if we know the population has a normal N(5,1) distribution, we can just sample straight from the distribution, this is called parametric bootstrap
+
+## Parametric Estimate
+
+We can estimate the distribution function F(x) using a parametric model $F(x;\theta)$ which is indexed by some parameters
+
+Generate 100 observations from $G(\mu =5, \sigma = 1)$
+
+If our data looks similar to the guassian distribution, then we can superimpose a normal line on the ecdf, and then if the values look similar/the same, we can use $\overline{x} \text{ and } \hat{\sigma}$ to generate samples from the normal distribution.
+
+## Differences
+
+__Non-Parametric__
+
+- Given a sample, obtain an estimate using the sample.
+- Generate B bootstrap samples
+
+__Parametric__
+
+- For a given sample S and parametric model $F(x;\hat{\theta})$
+- Obtain an estimate mean and sd using the sample
+
+### Mean
+
+If the distribution is similar, the mean will have a very similar looking histogram
+
+Is only effected by extreme values
+
+### Median
+
+Median might not always look as good.
+
+When you take a sample of a sample, 
+
+# would this also depend on the size of the sample? The accuracy
+
+## Iris example
+
+Regression problems:
+
+1. $\hat{\alpha} and \hat{\beta}$ are related
+2. Interpretation at 0
+
+So we can use 
+
+$$Y_i = \alpha + \beta(x_i-\overline{x}) + R_i$$
+
+$\alpha = \beta_0$
+$\beta = \beta_1$
+
+1. Interpretation of $\alpha$ is good
+2. $\tilde{\alpha}$ & $\tilde{\beta}$ will be uncorrelated
+
+

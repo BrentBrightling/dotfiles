@@ -1,0 +1,40 @@
+```{r}
+#pop is a list whose two members are two sub-populations
+
+calculateSLmulti <- function(pop, discrepancies, B_outer = 1000, B_inner){
+  if (missing(B_inner)) B_inner <- B_outer
+  ## Local function to calculate the significance levels
+  ## over the discrepancies and return their minimum
+
+  getSLmin <- function(basePop, discrepanies, B) {
+    observedVals <- sapply(discrepancies, 
+                           FUN = function(discrepancy) {discrepancy(basePop)})
+    K <- length(discrepancies)
+    total <- Reduce(function(counts, i){
+      #mixRandomly mixes the two populations randomly, so the new sub-populations are indistinguishable
+      NewPop <- mixRandomly(basePop)
+
+      ## calculate the discrepancy and counts
+      Map(function(k) {
+        Dk <- discrepancies[[k]](NewPop)
+        if (Dk >= observedVals[k]) counts[k] <<- counts[k] +1 
+      }, 1:K) 
+      counts
+    }, 
+    
+    1:B, init = numeric(length=K)) 
+
+    SLs <- total/B
+    min(SLs)
+  }
+
+  SLmin <- getSLmin(pop, discrepancies, B_inner)
+  total <- Reduce(function(count, b){
+                  basePop <- mixRandomly(pop)
+                  if (getSLmin(basePop, discrepancies, B_inner) <= SLmin) count + 1 else count
+                           },   1:B_outer, init = 0)
+
+  SLstar <- total/B_outer
+  SLstar
+}
+```

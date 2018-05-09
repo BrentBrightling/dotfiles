@@ -1,0 +1,123 @@
+# Sample Review
+
+# All Possible Sample Slides
+
+## Sample Error
+
+__Sample Error:__ $\alpha(s) - \alpha(p)$
+
+  - The error depends on the sample and the attribute
+
+Quantifying Error:
+
+  - For numerical attributes, this is determined mathematically
+  - For graphical attributes it is not precise and meant to be taken notionally
+
+## Taking a sample
+
+```{r}
+s = sample(length(agpop$farms87), 100)
+```
+
+## Fisher Consistency
+
+### Definition
+
+If the sample S is equal to the population P, then the sample error should be zero (or non-existent)
+
+  - This would mean that the estimation is in some sense consistent
+
+
+## Sample as a Population
+
+In every respect S (the sample) could be considered a population itself and might even sensibly be called a "sample population"
+
+  - Treating S as a population allows us to evaluate any population attribute on the sample in the same way wee would for P
+  - In some applications, we use the term "pseudo population" in reference to the sample
+
+Some samples will have a small sample error, and some will have a large one
+
+### All possible samples
+
+- Suppose the population has size N and we want samples of size n.
+  - Then there are ${N \choose n}$ different possible samples of size n
+
+```{r}
+# Code for N choose n
+combn(N, n)
+```
+
+## Average Sample Error
+
+The average sample error over all possible samples of size n is:
+
+$$Average sample error = \frac{\sum_{i=1}^{N_s}\alpha(S_i)}{N_s}-\alpha(P)$$
+
+## Consistency
+
+The concentration indicates some kind of consistency for the particular attribute here
+
+  - To quantify this concentration we could do:
+
+$$|\alpha(S) - \alpha(P)| < c$$ 
+
+  - for some c > 0
+
+Consider a population P of size $N < \infinity$
+
+  - for each n, we can construct the set of all possible samples
+  $$P_S(n) = {S : S \subset P and |S| = n}$$
+  - for any c > 0 
+  $$P_a(c,n) = {S : S \subset P_S(n) and |a(S) - a(P)| <c}$$
+  - and define the proportion
+  $$p_a(c,n) = \frac{P_a(c,n)}{P_S(n)}$$
+  - for all c > 0, and $n \leq N$
+
+If we plot the absolute sample error vs the proportion for varying sample size n, for a fixed c > 0 we see that the proportion increases with n
+
+## Comparing Attributes
+
+To compare different attributes, we use the __relative__ absolute sample error.
+For any c > 0 let,
+
+$$P_a^{\*}(c,n) = {s : S \subset P_S(n) and \frac{|a(S) - a(P)}{\alpha(P)} <c}$$
+
+and define the corresponding proportion, for all c > 0, and $n \leq N$
+
+$$p_a^{\*}(c,n) = \frac{P_a^{*}(c,n)}{P_S(n)}$$
+
+which measures the consistency of the sample attribute with respect to the same population attribute
+
+# Selecting Samples
+
+As the sample size increases,
+
+- sample attribute values concentrate about the population attribute (at least, we hope that happens)
+- This concentration reassures us that estimating the population attribute from a sample attribute may not be too misleading
+
+For any particular sample, there is little to suggest whether it is good or bad in itself
+
+## Selecting Samples
+
+For any particular sample
+
+  - The attribute calculated based on the sample identical to the population attribute or
+  - it might be so different we would be completely misled about the true nature of the population attribute from the sample attribute
+
+This is why it is important to understand how the sample is selected, and if it is within our power to do so, to have a hand in selecting the sample itself.
+
+  - Even when the latter is possible, enormous care must be taken so that our own prejudices and pre-conceptions about the population do not render a sample that is misleading.
+
+## Population of Samples
+
+Consider the population of M samples with size n.
+
+$$P_S = {S_1, S_2, ..., S_M}$$
+
+Any attribute is not just a variate on that unit!
+
+$$P_a(S) = {a(S_2), a(S_2), ..., a(S_M)}$$
+
+If we select our sample from $P_S$ with probability $\frac{1}{M}$ then the histogram shows the distribution for the variate values $\alpha(S)$
+
+

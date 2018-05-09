@@ -1,0 +1,12 @@
+---
+layout: default
+title: Your Ocassions Toronto Event Decorators
+style: <link rel="stylesheet" href="assets/css/index.css">
+script: <script src="/assets/js/nav.js"></script>
+---
+
+{% include nav.html homeClass='class="selected"' %}
+{% include header.html %}
+{% include blurb.html %}
+{% include callouts.html %}
+{% include footer.html %}

@@ -1,0 +1,426 @@
+---
+title: "CO 250 Theorems"
+author: "Brent Brightling"
+---
+
+# Chapter 1
+
+## Remark 1.1 
+
+An st-path P intersects every st-cut
+
+## Remark 1.2
+
+Let S be a set of edges that contains at least one edge from every st-cut.
+Then there exists an st-path P that is contained in the edges of S.
+
+# Chapter 2
+
+## Proposition 2.1 
+
+Let A be a matrix and b be a vector. Then the system
+
+$$ Ax = b \qquad x \geq 0$$
+
+has no solution if there exists a vector y such that:
+
+1. $y^{T}A \geq 0^{T}$
+2. $y^{T}b < 0$
+
+## Proposition 2.2
+
+Suppose there exists a feasible solution $\overline{x}$ and a vector d such that:
+
+1. $Ad = 0$
+2. $d \geq 0$
+3. $c^{T}d > 0$
+
+Then (P) is unbounded
+
+## Remark 2.3 
+
+Every basis is associated with a unique basic solution
+
+## Proposition 2.4
+
+Suppose an LP
+
+$$max\{z(x) = c^{T}x+\overline{z}: Ax=b, x\geq 0\}$$
+
+and a basis B of A are given.
+Then the following LP is an equivalent LP in canonical form for the basis B:
+
+
+$$max \qquad z(x) = y^{T}b+\overline{z}+(c^{T}-y^{T}A)x\\ \text{subject to} \\ \qquad A_{B}^{-1}Ax = A_{B}^{-1}b \\ \qquad x \geq 0$$
+
+where $y=A_{B}^{-T}c_{B}$
+
+## Remark 2.5
+
+If $c_{N}\leq 0$ then $\overline{x}$ is an optimal solution to (P)
+
+## Remark 2.6 
+
+If $A_{k}\leq 0$, then the LP is unbounded
+
+## Theorem 2.7
+
+The simplex procedure with Bland's rule terminates
+
+## Proposition 2.8
+
+Given an algorithm to solve C, we can use it to solve problem A
+
+## Proposition 2.9
+
+Given an algorithm to solve C, we can use it to solve problem B
+
+## Remark 2.10
+
+Let $x\prime = (x_{1}\prime ,..., x_{n+m}\prime)^{T}$ be an optimal solution to (Q):
+
+1. If w = 0, then $(x_{1}\prime ,..., x_{n}\prime)^{T}$ is a solution to (P)
+2. if w > 0, then (P) is infeasible
+
+## Theorem 2.11 - Fundamental Theorem of Linear Programming (SEF)
+
+Let (P) be an LP problem in SEF.
+If (P) does not have an optimal solution, then (P) is either infeasible or unbounded. 
+Moreover:
+
+1. If (P) is feasible, then (P) has a basic feasible solution
+2. If (P) has an optimal solution, then (P) has a basic feasible solution that is optimal 
+
+## Theorem 2.12 - Fundamental Theorem of Linear Programming 
+
+Let (P) be an LP problem.
+Then exactly one of the following holds:
+
+1. (P) is infeasible
+2. (P) is unbounded 
+3. (P) has an optimal solution
+
+## Theorem 2.13 
+
+Let $a,b \in R^{n}$. Then $a^{T}b = \|a\| \|b\|cos(\theta)$ where $\theta$ is the angle between a and b.
+Therefore, for every pair of nonzero vectors a,b, we have:
+
+- $a^{T}b = 0$ if and only if a,b are orthogonal
+- $a^{T}b > 0$ if and only if the angle between a,b is less than $90\textdegree$
+- $a^{T}b < 0$ if and only if the angle between a,b is greater than $90\textdegree$
+
+Let $\alpha$ be a nonzero vector with n components and let $\beta \in R$, we define:
+
+1. $H := \{x \in R^{n}: a^{T}x = \beta\}$ is a hyperplane, and
+2. $F := \{x \in R^{n}: a^{T}x \leq \beta\}$ is a halfspace
+
+Consider the following inequality:
+
+$$a^{T}x \leq \beta$$
+
+Hence, H is the set of points satisfying constraint $(*)$ with equality and F is the set of points satisfying constraint $(*)$.
+Suppose that $\overline{x}\in H$ and let x be any other point in H.
+Then $a^{T}\overline{x}=a^{T}x=\beta$.
+Equivalently, $a^{T}(x-\overline{x})=0$, i.e. $a$ and $x-\overline{x}$ are orthogonal.
+This implies (1) in following remark.
+
+## Remark 2.14
+
+Let $\overline{x}\in H$
+
+1. H is the set of points x for which $a$ and $x-\overline{x}$ are orthogonal
+2. F is the set of points x for which $a$ and $x-\overline{x}$ form an angle of at least $90\textdegree$
+
+## Proposition 2.15
+
+The feasible region of an LP is a polyhedron or equivalently the intersection of a finite number of halfspaces
+
+## Remark 2.16 
+
+Halfspaces are convex
+
+## Remark 2.17
+
+For every $j \in J$, let $C_{j}$, denote a convex set.
+Then the intersection 
+$$ C :\bigcap \{X_{j}: j \in J\}$$
+
+is convex.
+Note, that J can be infinite
+
+## Proposition 2.18
+
+Polyhedra are convex
+
+## Remark 2.19
+
+$x \in C$ is not an extreme point of C if and only if 
+
+$$x = \lambda z x^{(1)}+(1-\lambda)x^{(2)}$$
+
+for distinct points $x^{(1)}, x^{(2)}\in C$ and $\lambda$ with $0 < \lambda < 1$
+
+## Theorem 2.20
+
+Let $P = \{x \in R^{n}: Ax \leq b\}$ be a polyhedron and let $\overline{x} \in P$.
+Let $A^{=}x = b^{=}$ be the set of tight constraints for $\overline{x}$.
+Then $\overline{x}$ is an extreme point of P if and only if $rank(A^{=})=n$
+
+## Theorem 2.21
+
+Let A be a matrix where the rows are linearly independent and let b be a vector.
+Let $P=\{x:Ax=b, x \geq 0\}$ and let $\overline{x}\in P$.
+Then $\overline{x}$ is an extreme point of P if and only if $\overline{x}$ is a basic feasible solution of $Ax = b$
+
+## Remark 2.22
+
+x is an extreme point for the feasible region of (P) if and only if $\hat{x}$ is an extreme point for the feasible region of $(\hat{P})$
+
+# Chapter 3
+
+## Theorem 3.1 - Optimality Conditions for Shortest Path
+
+If the widths are feasible, then the total width of all st-cuts is a lower bound on the length of any st-path.
+In particular, if an st-path has length equal to the total width of all st-cuts, then it is a shortest st-path
+
+## Theorem 3.2 - Weak Duality - Special Form
+
+Consider the following pair of LPs:
+
+$$min\qquad{c^Tx:Ax \geq b, x \geq \emptyset} \qquad (P),$$
+$$max\qquad{b^Ty:A^Ty \leq c, y \geq \emptyset} \qquad (D)$$
+
+Let $\overline{x}$ be a feasible solution for (P) and $\overline{y}$ be a feasible solution for (D).
+Then $c^T\overline{x} \geq b^T\overline{y}$. 
+Moreover, if equality holds, then $\overline{x}$ is an optimal solution for (P).
+
+In the previous theorem, we define (D) to be the _dual_ of (P)
+
+## Remark 3.3
+
+If (D) is the dual of the LP relaxation of (3.9), then the value of any feasible solution of (D) is a lower bound on the length of any st-path
+
+## Remark 3.4
+
+1. In row U of A, entries with a 1 correspond to the edges in $\delta(U)$
+2. In column e of A, entires with a 1 correspond to the st-cuts containing edge e
+
+## Theorem 3.5 
+
+If $c_e \geq 0$ for all $e \in E$, then the linear program has an integral optimal solution;
+i.e. it has an optimal solution all of whose variables have integer values.
+
+## Theorem 3.2 - Weak Duality - Special Form
+
+Consider the following pair of LPs:
+
+$$min\qquad{c^Tx:Ax = b, x \geq \emptyset}\qquad (P),$$
+$$max\qquad{b^Ty:A^Ty \leq c}\qquad (D)$$
+
+Let $\overline{x}$ be a feasible solution for (P) and $\overline{y}$ be a feasible solution for (D).
+Then $c^T\overline{x} \geq b^T\overline{y}$. 
+Moreover, if equality holds, then $\overline{x}$ is an optimal solution for (P).
+
+In the previous theorem, we define (D) to be the _dual_ of (P)
+
+## Theorem 3.13
+
+If G is a bipartite graph and there exists a perfect matching, then the LP relaxation of (3.24) has an integral optimal solution;
+i.e. there is an optimal solution all of whose entries are integers
+
+# Chapter 4 - Duality Theory
+
+## Theorem 4.1 - Weak Duality Theorem
+
+Let (P) and (D) be a primal-dual pair where (P) is a maximization problem and (D) a minimization problem. 
+Let $\overline{X}$ and $\overline{y}$ be feasible solutions for (P) and (D) respectively:
+
+1. Then $C^T\overline{x} \leq b^T\overline{y}$
+2. If $c^T\overline{x}=b^T\overline{y}$, then $\overline{x}$ is an optimal solution to (P) and $\overline{y}$ is an optimal solution to (D).
+
+Observe that (2) in the previous theorem follows immediately from (1).
+This is because as $\overline{y}$ is feasible, (1) implies that for every feasible solution x of (P), $c^Tx\leq b^T\overline{y}$, i.e. $b^T\overline{y}$ is an upper bound of (P).
+But then $\overline{x}$ is an optimal solution to (P) since its value is equal to its upper bound.
+The argument to prove that $\overline{y}$ is an optimal solution to (D) is similar.
+
+## Corollary 4.2 
+
+Let (P) and (D) be a primal-dual pair.
+Then:
+
+1. if (P) is unbounded, then (D) is infeasible,
+2. If (d) is unbounded, then (P) is infeasible,
+3. If (P) and (D) are both feasible, then (P) and (D) both have optimal solutions.
+
+## Theorem 4.3 Strong Duality 
+
+Let (P) and (D) be a primal-dual pair.
+If there exists an optimal solution $\overline{x}$ of (P), then there exists an optimal solution $\overline{y}$ of (D).
+Moreover, the value of $\overline{x}$ in (P) equals the value of $\overline{y}$ in (D).
+
+## Theorem 4.4 Strong Duality - Feasibility Version
+
+Let (P) and (D) be a primal-dual pair.
+If (P) and (D) are both feasible, then there exists an optimal solution $\overline{x}$ of (P) and an optimal solution $\overline{y}$ of (D) and the objective value of $\overline{x}$ in (P) equals the objective value of $\overline{y}$ in (D).
+
+## Theorem 4.5 Complementary Slackness - Special Case
+
+Let $\overline{x}$ be a feasible solution to $max\{c^Tx:Ax \leq b\} \text{ (E1)}$ and let $\overline{y}$ be a feasible solution to $min\{b^Ty:A^Ty=c, y \geq 0 \} \text{ (E2)}$.
+Then $\overline{x}$ is an optimal solution to (E1) and $\overline{y}$ is an optimal solution to (E2) if and only if for every row index i of A, constraint i of (E1) is tight for $\overline{x}$ or the corresponding dual variable $\overline{y}_i = 0$ 
+
+This theorem generalizes to arbitrary linear programs.
+Consider a primal-dual pair $(P_{MAX}) \text{ and } (P_{MIN})$ as given in table 4.1.
+Let $\overline{x}$ be a feasible solution to $P_{MAX}$ and let $\overline{y}$ be a feasible solution to $(P_{MIN})$.
+We say that $\overline{x}, \overline{y}$ satisfy the _complementary_ slackness (CS) conditions if:
+
+- For every variable $x_j$ of $(P_{MAX})$, $\overline{x}_j=0$ or the corresponding constraint j of $(P_{MIN})$ is satisfied with equality.
+- For every variable $y_i$ of $(P_{MIN})$, $\overline{y}_i=0$ or the corresponding constraint i of $(P_{MAX})$ is satisfied with equality.
+
+## Theorem 4.6 - Complementary Slackness Theorem
+
+Let (P) and (D) be an arbitrary primal-dual pair: Let $\overline{x}$ be a feasible solution to (P) and let $\overline{y}$ be a feasible solution to (D).
+Then $\overline{x}$ is an optimal solution to (P) and $\overline{y}$ is an optimal solution to (D) if and only if the complimentary slackness conditions hold.
+
+## Theorem 4.7
+
+Let $\overline{x}$ be a feasible solution to $max\{c^Tx:Ax \leq b\}$.
+Then $\overline{x}$ is optimal if and only if c is in the cone of tight constraints for $\overline{x}$
+
+# Chapter 6 - Solving Integer Programs
+
+## Theorem 6.1
+
+Consider the following polyhedron $P=\{x\in R^n: Ax \leq b\}$ where all entries of A and b are rational numbers.
+Let S be the set of all integer points in P.
+Then the convex hull of S is a polyhedron Q described by a matrix and a vector where all entries are rational.
+
+## Theorem 6.2
+
+The following hold for the IP (IP 1) and the LP (LP 1):
+
+1. (IP 1) is infeasible if and only if (LP 1) is infeasible 
+2. (IP 1) is unbounded if and only if (LP 1) is unbounded.
+3. Every optimal solution to (IP 1) is an optimal solution to (LP 1)
+4. Every optimal solution to (LP 1) that is an extreme point is an optimal solution to (IP 1)
+
+Notes:
+
+- This theorem tells us that in a theoretical sense integer programming reduces to linear programming
+- The catch is the resulting LP can be exponentially larger than it's respective IP, thus is cannot be described completely in practice
+    - Instead we try to approximate the description of the polyhedron using constraints
+
+LP 1:
+
+
+$max \qquad c^Tx \\
+\text{subject to} \\
+\qquad A`x \leq b`$
+
+IP 1:
+
+$max \qquad c^Tx \\
+\text{subject to} \\
+\qquad Ax \leq b \\
+\qquad x integer$ 
+
+## Remark 6.3
+
+Suppose (P2) is a relaxation of (P1).
+Then:
+
+1. if (P2) is infeasible, (P1) is infeasible, and
+2. if $\overline{x}$ is optimal for (P2) and $\overline{x}$ is feasible for (P1), $\overline{x}$ is optimal for (P1).
+3. If $\overline{x}$ is an optimal solution for (P2), $c^T\overline{x}$ is an upper bound for (P1)
+
+## Algorithm 6.8 - Cutting Plane Algorithm
+
+(1): $max\{c^Tx: Ax \leq b\}$
+
+
+$\text{loop} \\
+\text{  Let (LP) denote (1)} \\
+\text{  if (LP) is infeasible then} \\
+\quad \text{    stop (IP) is infeasible} \\
+\text{  end if} \\
+\text{  Let } \overline{x} \text{ be the optimal solution to (LP)} \\
+\text{   if }\overline{x} \text{ is integral then}\\
+.\quad \text{     stop }\overline{x} \text{ is an optimal solution to (IP)} \\
+\text{   end if} \\
+\text{   Find a cutting plane }a^Tx \leq \beta \text{ for } \overline{x}\\
+\text{   Add constraint }a^Tx \leq \beta \text{ to the system }Ax \leq b \\
+\text{end loop}$
+
+## Remark 6.4 
+
+Constraint $x_l + \sum_{j \in N} \lfloor\overline{A}_{ij}\rfloor x_j \leq \lfloor \overline{b}_i \rfloor$ is a cutting plane for the basic solution $\overline{x}$
+
+
+# Chapter 7 
+
+## Theorems 7.1
+
+There do not exist integers $x,y,z \geq 1$ and integer $n \geq 3$ such that $x^{n}+y^{n}=z^{n}$
+
+## Proposition 7.2
+
+Let $f: R^{n}\rightarrow R$.
+Then f is convex if and only if $epi(f)$ is a convex set.
+
+### Proof
+
+Suppose $f: R^{n}\rightarrow R$ is convex. Let $\binom{\mu_{1}}{u},\binom{\mu_{2}}{v} \in epi(f)$ and $\lambda \in [0,1]$. 
+We have
+
+$$f(\lambda u + (1- \lambda)v) \leq \lambda f(u) + (1-\lambda)f(v) \leq \lambda \mu_{1}+ (1-\lambda)\mu_{2}$$
+
+which implies $\binom{\lambda \mu_{1}+(1-\lambda)\mu_{2}}{\lambda u+(1-\lambda)v} \in epi(f)$.
+Note that in the above, the first inequality uses the convexity of f and the second inequality uses the facts $\lambda\geq 0, (1-\lambda)\geq 0$ and $\binom{\mu_{1}}{u},\binom{\mu_{2}}{v} \in epi(f)$.
+
+Now suppose that $epi(f)$ is convex. Let $u,v \in R^{n}$ and $\lambda \in [0,1]$. Then $\binom{f(u)}{u},\binom{f(v)}{v} \in epi(f)$.
+Hence
+
+$$\lambda\binom{f(u)}{u} + (1-\lambda)\binom{f(v)}{v} \in epi(f)$$
+
+This implies (by the definition of $epi(f)$), $f(\lambda u + (1-\lambda)v) \leq \lambda f(u) + (1-\lambda)f(v)$.
+Therefore, $f$ is convex.
+
+## Remark 7.3
+
+The level set of a convex function is a convex set.
+
+## Remark 7.4
+
+The feasible region of a convex NLP is a convex set.
+
+## Remark 7.5
+
+Let $g:R^{n}\rightarrow R$ be a convex function, let $\overline{x} \in R^{n}$ such that $g(\overline{x}) =0$, and let $s \in R^{n}$ be a subgradient of f at $\overline{x}$.
+Denote by C the level set a$\{x \in R^{n}: g(x) \leq 0\}$ and by F the halfspace $\{x \in R^{n}:g(\overline{x}) + s^{T}(x-\overline{x}) \leq 0\}$. Then F is a supporting halfspace of C at $\overline{x}$.
+
+## Corollary 7.6
+
+Consider an NLP of the form given in (1.35).
+Let $\overline{x}$ be a feasible solution and suppose that constraint $g_{i}(x) \leq 0$ is tight for some $i \in \{1,..,m\}$.
+Suppose $g_{i}$ is a convex function that has a subgradient s at $\overline{x}$.
+Then the NLP obtained by replacing constraint $g_{i}(x) \leq 0$ by the linear constraint $s^{T}x \leq s^{T}\overline{x}- g_{i}(\overline{x})$ is a relaxation of the original NLP.
+
+## Proposition 7.7 
+
+Consider the NLP (7.2) and assume that $g_{1},...,g_{m}$ are convex functions.
+Let $\overline{x}$ be a feasible solution and suppose that for all $i \in J(\overline{x})$ we have a subgradient $s_{i}$ at $\overline{x}$.
+If $-c \in cone{s_{i}: i \in J(\overline{x})}$, then $\overline{x}$ is an optiimal solution.
+
+## Proposition 7.8
+
+Let $f:R^{n} \rightarrow R$ be a convex function and let $\overline{x} \in R^{n}$.
+If the gradient $\nabla f(\overline{x})$ exists then it is a subgradient of f at $\overline{x}$.
+
+## Theorem 7.9 - Karush-Kuhn-Tucker Theorem
+
+Consider a convex NLP of the form (1.35) that has a Slater point.
+Let $\overline{x}\in R^{n}$ be a feasible solution and assume that $f,g_{1},g_{2},...,g_{m}$ are differentiable at $\overline{x}$.
+Then $\overline{x}$ is an optimal solution NLP if and only if
+
+$$-\nabla f(\overline{x}) \in cone\{\nabla g_{i}(\overline{x}) : i \in K(\overline{x})\}$$
+
+

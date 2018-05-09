@@ -1,0 +1,216 @@
+# Populations Review
+
+## Basics
+
+### Def: Population
+
+A finite (though possibly huge) set P of elements
+
+### Def: Unit
+
+A unit is an element of a population
+
+### Def: Variate
+
+A Variate is a function x(u), y(u), etc. on a population's unit $u \in P$, or just $x_u$
+
+### Def: Attribute
+
+A population attribute is a function on the population (like mean, median).
+We will investigate their characteristics.
+
+Attributes can be numerical or graphical
+
+#### Some Important Attributes
+
+__Location Attributes:__
+
+- Population Average
+- Population Proportion
+- Population Total
+
+__Variability Attributes:__
+
+- Population Variance:
+$$\alpha(P) = \frac{1}{N}\sum_{u\in P}(y_u-\overline{y})^2$$
+- Population Standard Deviation
+$$\alpha(P) = \sqrt{\frac{1}{N}\sum_{u\in P}(y_u-\overline{y})^2}$$
+- Coefficient of Variation
+$$\alpha(P) = \frac{SD_P(y)}{\overline{y}}$$
+
+## Explicit Attributes
+
+### Units of Measurement Change
+
+There are instances when we might run a function on our data that might change the scale, and/or location of our data.
+
+#### Scale Change
+
+We can consider these to be changes such as kilograms to grams to pounds.
+
+These changes are represented by: $y_{new} = m y_{old}$
+
+#### Location Change
+
+We can consider these to be changes such that it's not just a scale change but a value addition is needed
+
+These are represented by: $y_{new}=y_{old}+b$
+
+#### Scale and Location Changes
+
+We sometimes have changes such that we change both the location and scale $y_{new} = my_{old}+b$
+
+### Location
+
+For the following definitions we assume $m > 0$ and $b \in R$
+
+#### Location Invariant
+
+We say an attribute is location invariant if
+
+$$a(y_1+b,....y_N+b) = a(y_1,...,y_N)$$
+
+#### Location Equivariant
+
+We say an attribute is location equivariant if
+
+$$a(y_1+b,....y_N+b) = a(y_1,...,y_N)+b$$
+
+### Scale And Location
+
+For the following definitions we assume $m > 0$ and $b \in R$
+
+#### Scale Invariant
+
+$$a(m*y_1,...,m*y_N) = a(y_1,....,y_n)$$
+
+#### Scale Equivariant
+
+$$a(m*y_1,...,m*y_N) = m*a(y_1,...,y_N)$$
+
+#### Location-Scale Invariant
+
+$$a(m*y_1+b,...,m*y_N+b) = a(y_1,....,y_n)$$
+
+#### Location-Scale Equivariant
+
+$$a(m*y_1+b,...,m*y_N+b) = m*a(y_1,...,y_N)+b$$
+
+### Replication
+
+We can investigate if a population P is duplicated, how does the attribute change on the new population
+
+#### Replication Invariant
+
+$$\alpha(P^k) = \alpha(P)$$
+
+#### Replication Equivariant 
+
+$$\alpha(P^k)=k*\alpha(P)$$
+
+### Influence and Sensitivity Curves
+
+An important characteristic of a population attribute is it's sensitivity to the value of the variate on a single unit in the population
+
+We can quantify this with:
+
+$$\delta(a,u) = a(y_1,...,y_{u-1},y_u, y_{u+1}, ..., y_N)-a(y_1,...,y_{u-1}, y_{u+1}, ..., y_N)$$
+
+Ideally, no one unit's value should have a greater influence than any other.
+If this isn't the case there might be an error, or it might be the most interesting unit in the population.
+
+#### Sensitivity Curve
+
+The sensitivity curve gives a scaled measure of the effect that a single variate value y has on the value of a population attribute $\alpha(P)$.
+
+$$SC(y;\alpha(P)) = N[\alpha(y_1,....,y_N) - a(y_1,...,y_{N-1}]$$
+
+
+## Implicit Attributes
+
+In many cases, attributes of a population are defined implicitly, typically as the solution to some equation or set of equations.
+
+For example:
+
+$$\hat{\theta}= arg \text{ } min_{\theta \in \Theta} \rho(\theta; P)$$
+
+Maximizing is the same as minimizing the negation
+$$max_{\theta \in \Theta}\rho(\theta; P) = min_{\theta \in \Theta} -\rho(\theta; P)$$
+
+The most common form for $\rho$ is a sum of functions $\rho$ evaluated at each unit $u\in P$
+
+### Familiar Examples
+
+#### Least Squares
+
+$$\rho(\theta; u) = (y_{u}-\theta)^{2}, \text{ yields } \hat{\theta}=\overline{y} \text{ as the solution to}$$
+$$\hat{\theta}=arg\text{ } min_{\theta \in R}\sum_{u\in P}(y_{u}-\theta)^{2}$$
+
+#### Weighted Least Squares
+
+$$\rho(\theta;u) = w_{u}(y_{u}-\theta)^{2}, \text{ yields } \hat{\theta}=\frac{\sum_{u \in P}w_{u}y_{u}}{\sum_{u\in P}w_{u}} \text{ as the solution to}$$
+
+$$\hat{\theta}=arg\text{ } min_{\theta \in R}\sum_{u\in P}w_{u}(y_{u}-\theta)^{2}$$
+
+#### Least Absolute Deviations 
+
+$$\rho(\theta; u ) = |y_{u}-\theta|, \text{ yields } \overline{\theta}=Q_{y}(1/2) \text{ as the solution to} $$
+$$\hat{\theta}=arg\text{ } min_{\theta \in R}\sum_{u\in P}|y_{u}-\theta|$$
+
+#### Quantiles
+
+For some $q \in (0,1)$ the $q^{th}$ quantile of $y_{1},...,y_{J}$ minimizes the *vee* function 
+$$\sum_{u\in P}p_{q}(y_{u} - \theta)$$
+
+where
+
+$$p_{q}(z)= \begin{cases} qz, & z \geq 0 \\ -(1-q)z & z < 0 \end{cases}$$
+
+is called a **vee function**.
+The quantile $\hat{\theta}=Q_{y}(q)$ is the solution to the sum of vee functions below
+
+$$Q_{y}(q) = \hat{\theta}= arg \text{ } min_{\theta\in R}\sum_{u \in P}p_{q}(y_{u}-\theta)$$
+
+### A Vector Values Attribute
+
+A familiar vector valued attribute $\theta = (\alpha, \beta) \in R^{2}$ is the pair of coefficients of a line being fitted to two variate values y and x as in:
+
+$$y_{u}= \alpha + \beta x_{u}+r_{u}$$
+
+**Note:** for model interpretation, we often fit the line
+
+$$y_{u}= \alpha + \beta(x_{u}-c)+r_{u}$$
+
+for all $u \in P$
+
+- We should choose c such that it is meaningful
+    - eg. in the middle
+    - ie. $c = \overline{x}$
+- The coefficient $\alpha$ has the interpretation as the value of the line when $x_{u}=c$
+- If the choice of c is outside the range of the x values, such as $c =0$, it is less likely to have a meaningful interpretation
+- Whatever the value of c chosen, only the interpretation and value of the intercept $\alpha$ changes
+
+#### Def: Residual
+
+In the previous definition $r_{u} = y_{u}-\alpha-\beta x_{u}$ is called the residual
+
+A residual is the signed vertical distance between the point and the line given by the values of $\theta=(\alpha,\beta)$
+
+### Least Squares Regression
+
+When $\rho(\theta;U) = r^{2}_{u}$ the coefficients are determined as 
+$$\hat{\theta}=arg \text{ } min_{\theta \in R^{2}}\sum_{u \in P}(y_{u}-\theta)^{2}$$
+
+or equivalently with $\hat{\theta}= (\hat{\alpha},\hat{\beta})^{T}$ as 
+
+$$(\hat{\alpha},\hat{\beta})=arg \text{ } min_{\theta \in R^{2}}\sum_{u \in P}(y_{u}-\alpha-\beta(x-c))^{2}$$
+
+The resulting fitted line is called the **Least-squares** line:
+
+$$y=\hat{\alpha}+\hat{\beta}(x-c)$$
+
+and the fitted values are:
+
+$$y_{u}=\hat{\alpha}+\hat{\beta}(x_{u}-c)$$
+
+

@@ -1,0 +1,43 @@
+<div class="about">
+  <div class="content">
+    <section>
+      <div class="left">
+        <div class="photoContainer">
+          <img src="assets/img/special_events/327.jpg" alt="">
+        </div>
+      </div>
+      <div class="right">
+        <div class="textContainer">
+          <div class="who">
+            <h2>The company</h2>
+            <p>
+            With over 20 years of decorating experience, our company has successfully launched special events, created displays and decorated for a multitude of clients and occasions. We started as wedding decorators and have expanded to all areas of decor. We have decorated church basements, backyards, community halls, Casa Loma, the Air Canada Centre, car showrooms and more. 
+            <br>
+            We are a small, family run business and believe in being closely involved with all aspects of your wedding or event. We pride ourself in providing a hands-on approach from personally meeting clients at their venue, answering any and all questions via email or phone call during the planning  process and up until the day of the wedding or event.
+            </p> 
+          </div>
+        </div> <!-- WhoContrainer -->
+      </div> <!-- Right -->
+      <div class="clearfix"></div>
+    </section>
+    <section>
+      <div class="left">
+        <div class="textContainer">
+          <div class="why">
+            <h2>Us</h2>
+            <p>
+            Your Occasions is owned and operated by Ray Ireland. Ray started decorating over 20 years ago for small wedding receptions and ceremonies until someone asked for "the works" and from that day on, Your Occasions came to be. Hundreds of weddings later Ray, his wife Rose and their team of decorators continue to work closely with clients to create the wedding they imagined. Every client is important, no matter the size of your budget or the location of your event. We love what we do and it shows in the repeat business and referrals we receive. 
+            </p>
+          </div>
+        </div>
+      </div> <!-- Left -->
+      <div class="right">
+        <div class="photoContainer">
+          <img src="assets/img/3289.jpg" alt="">
+        </div>
+      </div>
+      <div class="clearfix"></div>
+    </section>
+  </div>
+</div>
+

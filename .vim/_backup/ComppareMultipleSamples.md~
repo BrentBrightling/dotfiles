@@ -1,0 +1,76 @@
+# Comparison Over Multiple Samples
+
+- APSE over multiple samples
+
+When we are studying APSE we want to study over multiple samples
+
+$\hat{\mu}$ is a value that depends on the sample, so it can take on the good or bad of a sample.
+Thus APSE also depends on the sample as it depends on $\hat{\mu}$
+
+If we want the APSE of all samples, we need to calculate the APSE for every sample, and then calculate the average of them.
+
+## Notation
+
+Assume that $\mu(x)$ is the conditional average  of y __given__ x.
+
+$E(Y_i|x) = E(\alpha + \beta x_i + R_i)$
+
+$= \alpha + \beta x_i + E(R_i)$ where $E(R_i)=0$
+
+Note: It has to be $E(Y_i|x)$ as it is given the height, or else we would have a random variable equal to a contant one.
+
+Note that in the lobolly trees we have multiple points all at one X, and for the temperature we have a data point at every value at X. 
+This will effect how APSE functions on our data
+
+$Var(\tilde{\mu})$ is the variance of the different estimators used
+
+We know that $P = S \union T$ so $\sum_{i \in P} = \sum_{i \in S} + \sum_{i \in T}$
+
+The average variance is 0 when we only have one data point for x, however, if we have multiple points then this will have a value
+
+As the complexity of the model increases the variability of $\tilde{\mu}$ increases
+
+
+
+# Comparison Over Multiple Samples
+
+- APSE over multiple samples
+
+When we are studying APSE we want to study over multiple samples
+
+$\hat{\mu}$ is a value that depends on the sample, so it can take on the good or bad of a sample.
+Thus APSE also depends on the sample as it depends on $\hat{\mu}$
+
+If we want the APSE of all samples, we need to calculate the APSE for every sample, and then calculate the average of them.
+
+## Notation
+
+Assume that $\mu(x)$ is the conditional average  of y __given__ x.
+
+$E(Y_i|x) = E(\alpha + \beta x_i + R_i)$
+
+$= \alpha + \beta x_i + E(R_i)$ where $E(R_i)=0$
+
+Note: It has to be $E(Y_i|x)$ as it is given the height, or else we would have a random variable equal to a contant one.
+
+Note that in the lobolly trees we have multiple points all at one X, and for the temperature we have a data point at every value at X. 
+This will effect how APSE functions on our data
+
+$Var(\tilde{\mu})$ is the variance of the different estimators used
+
+We know that $P = S \union T$ so $\sum_{i \in P} = \sum_{i \in S} + \sum_{i \in T}$
+
+The average variance is 0 when we only have one data point for x, however, if we have multiple points then this will have a value
+
+As the complexity of the model increases the variability of $\tilde{\mu}$ increases
+
+
+### Bias
+
+$Bias = E(\tilde{\theta}- \theta)$$
+
+When we are calculating bias our "true" value would be the piecewise function.
+Not the model that we created.
+
+### Variance $\tilde{\mu_{s}(x)}
+

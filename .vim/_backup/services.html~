@@ -1,0 +1,101 @@
+<div id="services">
+  <div class="header"></div>
+  <div class="callout-container">
+    <div class="inner-container">
+      <div class="callout selected" data-section="weddings" id="weddingsCallout">
+        <div class="content-container">
+          <img src="../assets/img/icons/wedding-rings.png" alt="Wedding Rings">
+          <h2>Weddings</h2>
+        </div>
+      </div>
+      <div class="callout" id="corporateCallout" data-section="corporate">
+        <div class="content-container">
+          <img src="../assets/img/icons/briefcase.png" alt="Briefcase">
+          <h2>Corporate Events</h2>
+        </div>
+      </div>
+      <div class="callout" id="specialCallout" data-section="special">
+        <div class="content-container">
+          <img src="../assets/img/icons/fireworks.png" alt="Fireworks">
+          <h2>Special Occasions</h2>
+        </div>
+      </div>
+      <div class="callout" id="showroomCallout" data-section="showroom">
+        <div class="content-container">
+          <img src="../assets/img/icons/fireworks.png" alt="car">
+          <h2>Car Showrooms</h2>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="content">
+    <div id="weddings" class="container visible">
+      <div class="imageContainer">
+        <img src="../assets/img/weddings/1.jpg" alt="Wedding decor for head table">
+      </div>
+      <div class="textContainer">
+        <h2>Weddings</h2>
+        <span>
+          Let us help you bring your vision to life.. The head table is the focal point of the reception...understated or extravagant, it's up to you!  We share our years of experience and share helpful tips we have collected from couples over the last 20 years.</span>
+      </div>
+    </div>
+    <div id="corporate" class="container">
+      <div class="imageContainer">
+        <img src="../assets/img/corporate/1880.jpg" alt="Christmas Decorations at the Air Canada Centre">
+      </div>
+      <div class="textContainer">
+        <h2>Corporate Events</h2>
+        <span>
+          You can be confident that our team is committed to the success of your event.  We work closely with our clients to ensure the decor fits perfectly with the theme and purpose of your event.
+        </span>
+      </div>
+    </div>
+    <div id="special" class="container">
+      <div class="imageContainer">
+        <img src="../assets/img/special_events/1669.jpg" alt="Christmas decorations">
+      </div>
+      <div class="textContainer">
+        <h2>Special Occasions</h2>
+        <span>
+          Every occasion is special! If you are planning an occasion that has a theme let us help you.  We have a large inventory of decorations for a variety of themes (ie. Halloween, Christmas) and seasons (ie. spring, summer, fall, winter).
+        </span>
+      </div>
+    </div>
+    <div id="showroom" class="container">
+      <h1>Car Showrooms</h1>
+      <div class="contentContainer">
+        <div class="imageContainer">
+          <img src="../assets/img/showroom/1575.jpg" alt="Car showroom decorations">
+        </div>
+        <div class="textContainer">
+          <span>
+            Decorate the Showroom of your car dealership to create a welcoming atmosphere for guests and employees. Car dealerships can appear sterile when left without our personal touch.
+            <br><br>
+            All of our decorations are hung from the ceiling using a pole and magnet system which means you don’t have to move any cars! We decorate early in the morning before the sales department opens or later in the evening just before closing. This way we do not disrupt your business day.
+          </span>
+        </div>
+      </div>
+      <div class="contentContainer">
+        <div class="col">
+          <h2>Balloons</h2>
+        <div class="imageContainer">
+          <img src="../assets/img/showroom/6594.jpg" alt="Balloon decor for Kia Car Showroom">
+        </div>
+          <span>
+            Balloons have always been traditionally used in car dealerships so move into a more sophisticated look that can be comparably priced. Our seasonal decorations can stay up for 3 months (the entire season) and they never deflate or look tired and less perky from the day they were installed.
+          </span>
+        </div>
+        <div class="col">
+          <h2>Seasonal Displays</h2>
+        <div class="imageContainer">
+          <img src="../assets/img/showroom/68582.jpg" alt="Chinese New Year Decorations for Toyota Car Showroom">
+        </div>
+        <span>
+          Choose from seasonal displays (ie. winter, spring, summer, fall) or special occasions (ie. Christmas/Holiday Decorations, Chinese New Year, Olympic Games, Special Sales Event, etc.). We work with you to transform your Showroom.
+          </span>
+        </div>
+      </div>
+      </div>
+    </div>
+  </div>
+</div>

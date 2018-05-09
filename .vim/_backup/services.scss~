@@ -1,0 +1,125 @@
+#services {
+  // Callouts
+  .callout-container {
+    background-color: #FFE6DD;
+    height: 275px;
+    .inner-container {
+      padding-top: 50px;
+      width: 80%;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      height: 225px;
+      margin: 0 auto;
+      .callout {
+        background-color: #fdfdfd;
+        text-align: center;
+        height: 100%;
+        flex: 1 1 0;
+        max-width: 400px;
+        margin: 0 15px;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+        cursor: pointer;
+        border-top: 8px solid #fdfdfd;
+        border-bottom: 1px solid #ddd;
+        margin-top: -7px;
+        &.selected {
+          border: 1px solid #ddd;
+          border-top: 8px solid #FAA;
+          background-color: white;
+          border-bottom: 1px solid #FDFDFD;
+          box-shadow: inset 5px 0 15px -4px #ddd, inset -5px 0 15px -4px #ddd, inset 0 30px 0 0 white;
+        }
+        &:hover {
+          box-shadow: inset 5px 0 15px -4px #ddd, inset -5px 0 15px -4px #ddd, inset 0 30px 0 0 white;
+          border-top: 8px solid #faa; 
+        }
+        .content-container {
+          padding: 10px; 
+          padding-top: 20px;
+        }
+        img {
+          width: 100px;
+        }
+      }
+    }
+  }
+
+  // Content
+  .content {
+    border-top: 1px solid #ddd;
+    background-color: #FDFDFD;
+    .container {
+      padding-top: 50px;
+      padding-bottom: 50px;
+      max-width: 1280px;
+      width: 90%;
+      margin: 0 auto;
+      display: none;
+
+      &#showroom {
+        flex-direction: column;
+      }
+
+      h1 {
+        text-align: center;
+        margin-bottom: 40px;
+      }
+      &.visible {
+        display: flex;
+      }
+
+      .contentContainer {
+        display: flex;
+        flex-direction: row;
+      }
+      .imageContainer {
+        height: 275px;
+        img {
+          height: 100%;
+        }
+      }
+      .textContainer {
+        padding: 10px;
+        text-align: left;
+        justify-content: center;
+        align-content: center;
+        display: flex;
+        flex-direction: column;
+        margin-left: 25px;
+
+        h2 {
+          margin-top: 0;
+        }
+      }
+
+      .col {
+        margin-top: 50px;
+        display: flex;
+        flex-direction: column;
+        padding-left: 25px;
+        padding-right: 25px;
+
+        h2 {
+          text-align: center;
+        }
+
+        .imageContainer {
+          margin: 15px auto;
+          img {
+            display: block;
+            margin: 0 auto;
+          }
+        }
+
+        span {
+          margin-top: 15px;
+        }
+      }
+    }
+  }
+}
+
+@import "mediaQuery/services";

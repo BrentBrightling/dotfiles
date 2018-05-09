@@ -1,0 +1,72 @@
+<div id="gallery" class="gallery-container">
+  <div class="sorting">
+    <nav role="navigation" class="sidebar-navigation fixed">
+      <ul class="menu">
+        <li data-filter=".wedding">Weddings</li>
+        <li data-filter=".showroom">Showrooms</li>
+        <li data-filter=".special">Special Events</li>
+        <li data-filter=".casa-loma">Christmas</li>
+      </ul>
+    </nav>
+  </div>
+  <div class="grid-container">
+    <div class="grid">
+      <div class="grid-item casa-loma" style="background-image: url('../assets/img/christmas/11.jpg');"></div>
+      <div class="grid-item casa-loma" style="background-image: url('../assets/img/christmas/12.jpg');"></div>
+      <div class="grid-item casa-loma" style="background-image: url('../assets/img/christmas/67.jpg');"></div>
+      <div class="grid-item casa-loma" style="background-image: url('../assets/img/christmas/68.jpg');"></div>
+      <div data-size="small" class="grid-item casa-loma" style="background-image: url('../assets/img/christmas/69.jpg');"></div>
+      <div class="grid-item casa-loma" style="background-image: url('../assets/img/christmas/70.jpg');"></div>
+      <div class="grid-item casa-loma" style="background-image: url('../assets/img/christmas/71.jpg');"></div>
+      <div class="grid-item casa-loma" style="background-image: url('../assets/img/christmas/93.jpg');"></div>
+      <div class="grid-item casa-loma" style="background-image: url('../assets/img/christmas/100.jpg');"></div>
+      <div class="grid-item casa-loma" style="background-image: url('../assets/img/christmas/4766.jpg');"></div>
+      <div class="grid-item showroom" style="background-image: url('../assets/img/showroom/1.jpg');"></div>
+      <div class="grid-item showroom" style="background-image: url('../assets/img/showroom/2.jpg');"></div>
+      <div class="grid-item showroom" style="background-image: url('../assets/img/showroom/3.jpg');"></div>
+      <div class="grid-item showroom" style="background-image: url('../assets/img/showroom/4.jpg');"></div>
+      <div class="grid-item showroom" style="background-image: url('../assets/img/showroom/5.jpg');"></div>
+      <div class="grid-item showroom" style="background-image: url('../assets/img/showroom/6.jpg');"></div>
+      <div class="grid-item showroom" style="background-image: url('../assets/img/showroom/7.jpg');"></div>
+      <div class="grid-item showroom" style="background-image: url('../assets/img/showroom/8.jpg');"></div>
+      <div class="grid-item showroom" style="background-image: url('../assets/img/showroom/16.jpg');"></div>
+      <div class="grid-item showroom" style="background-image: url('../assets/img/showroom/19.jpg');"></div>
+      <div class="grid-item showroom" style="background-image: url('../assets/img/showroom/28.jpg');"></div>
+      <div class="grid-item showroom" style="background-image: url('../assets/img/showroom/29.jpg');"></div>
+      <div class="grid-item showroom" style="background-image: url('../assets/img/showroom/31.jpg');"></div>
+      <div class="grid-item showroom" style="background-image: url('../assets/img/showroom/115.jpg');"></div>
+      <div class="grid-item showroom" style="background-image: url('../assets/img/showroom/4747.jpg');"></div>
+      <div class="grid-item showroom" style="background-image: url('../assets/img/showroom/4957.jpg');"></div>
+      <div class="grid-item special" style="background-image: url('../assets/img/corporate/1.jpg');"></div>
+      <div class="grid-item special" style="background-image: url('../assets/img/corporate/2.jpg');"></div>
+      <div class="grid-item special" style="background-image: url('../assets/img/special_events/5.jpg');"></div>
+      <div class="grid-item special" style="background-image: url('../assets/img/special_events/6.jpg');"></div>
+      <div class="grid-item special" style="background-image: url('../assets/img/special_events/9.jpg');"></div>
+      <div class="grid-item special" style="background-image: url('../assets/img/special_events/34.jpg');"></div>
+      <div class="grid-item special" style="background-image: url('../assets/img/special_events/37.jpg');"></div>
+      <div class="grid-item special" style="background-image: url('../assets/img/special_events/56.jpg');"></div>
+      <div class="grid-item special" style="background-image: url('../assets/img/special_events/4683.jpg');"></div>
+      <div class="grid-item wedding" style="background-image: url('../assets/img/weddings/1.jpg');"></div>
+      <div class="grid-item wedding" style="background-image: url('../assets/img/weddings/2.jpg');"></div>
+      <div class="grid-item wedding" style="background-image: url('../assets/img/weddings/3.jpg');"></div>
+      <div class="grid-item wedding" style="background-image: url('../assets/img/weddings/4.jpg');"></div>
+      <div class="grid-item wedding" style="background-image: url('../assets/img/weddings/5.jpg');"></div>
+      <div class="grid-item wedding" style="background-image: url('../assets/img/weddings/6.jpg');"></div>
+      <div class="grid-item wedding" style="background-image: url('../assets/img/weddings/7.jpg');"></div>
+      <div class="grid-item wedding" style="background-image: url('../assets/img/weddings/8.jpg');"></div>
+      <div class="grid-item wedding" style="background-image: url('../assets/img/weddings/9.jpg');"></div>
+      <div class="grid-item wedding" style="background-image: url('../assets/img/weddings/14.jpg');"></div>
+      <div class="grid-item wedding" style="background-image: url('../assets/img/weddings/20.jpg');"></div>
+      <div class="grid-item wedding" style="background-image: url('../assets/img/weddings/32.jpg');"></div>
+      <div class="grid-item wedding" style="background-image: url('../assets/img/weddings/41.jpg');"></div>
+      <div class="grid-item wedding" style="background-image: url('../assets/img/weddings/43.jpg');"></div>
+      <div class="grid-item wedding" style="background-image: url('../assets/img/weddings/44.jpg');"></div>
+      <div class="grid-item wedding" style="background-image: url('../assets/img/weddings/45.jpg');"></div>
+      <div class="grid-item wedding" style="background-image: url('../assets/img/weddings/46.jpg');"></div>
+    </div>
+  </div>
+</div>
+  <div class="carousel-container hidden">
+    <div class="main-carousel hidden">
+    </div>
+  </div>

@@ -1,0 +1,1 @@
+PATH="$PATH:$(ruby -e 'print GEM.user_dir')/bin"

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <link rel="icon" href="/assets/img/logo/yo_small.png">
+    <title>{{ page.title }} {{site.title}}</title>
+    <meta name="viewport" content="width=device-width">
+    {{ page.style }}
+    <script src="https://use.fontawesome.com/ce23ea7c54.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  </head>
+  <body>
+
+    {{ content }}
+
+
+  {{ page.script }}
+  </body>
+</html>

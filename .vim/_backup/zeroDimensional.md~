@@ -1,0 +1,673 @@
+---
+title: "Zero Dimensional Data"
+author: "Brent Brightling"
+geometry: margin=2cm
+---
+
+# Introduction
+
+The ability to encode and decode numbers is an important thing to be able to do.
+In historic systems there have been numerous ways thought of to best represent data.
+These methods vary from different drawings of data, to similar numerical systems to that in which we have today.
+Looking at today, we have new ways of encoding numbers such as QR codes or UPC codes which allow us to store several numbers in a way that not only is distinguishable to humans, but can also be easily read and interpreted by computers (Note: they are not meant to be decoded by humans).
+
+# What is in a number?
+
+## Properties
+
+Some possible properties a number might have are:
+
+- A visual representation
+  - A number might have a picture that encodes the number and can be easily, efficiently, and accurately decoded
+- A representation that can be uniquely identified
+  - We want to be able to identify the same number more than once.
+- A quantity, or size, the ability to somehow order the data.
+  - We want to be able to order the numbers that we have, or else the representation would be hard to compare number to number
+
+## Where do numbers come from?
+
+Researchers have found that there are many types of animals that are able to distinguish quantity.
+Rhesus monkeys have been shown to be able to be trained to order numbers, and to use numerosity naturally, to select food sources having a greater number.
+However, they did struggle with differentiating a variety of numbers apart (for example 3 vs. 8, See Hauser, Carey, and Hauser, 2000)
+
+It's been show that human infants of only a few months are able to discriminate, represent, and remember a particularly small number of items.
+
+The ability to decode numbers depends on the culture, language, and training of a particular person.
+For example, in the Piraha culture, their counting words only contain "one, two, many", so these people would perform poorly on numerical tasks for numbers beyond 3.
+
+## Pictures Provide Meaning
+
+The ostensive definition of the number is the picture, its arrangement of elements is its pictorial form.
+
+The diagram is the meaning which is apprehended from its pictorial form.
+
+In early numerical systems, the meaning of the number is often given by its picture.
+
+Even an irrational number can be given an ostensive definition.
+
+![](root2.png){width= 33%}
+
+Even an operation or a theorem can be given its meaning through a pictorial form.
+For instance, we are easily able to represent multiplication through the use of rows and columns of some shape or picture.
+
+## A Brain for Numbers
+
+> Healthy human brains come equipped with several circuits that contribute to number processing
+
+Hence, humans have a "brain for numbers"
+
+The intraparietal sulcus (IPS) in the parietal lobe carries the principal function of perceptual-motor coordination and visual attention, as well as others.
+Here is also where numerical processing occurs as well as visuospatial working memory.
+The IPS is to largely be responsible for symbolic numerical processing (the recognition of numbers, and comparisons of magnitude.
+
+Nature and nurture interact; our brain adapts it circuitry to training.
+Because numbers are such a large part of our culture, our brain trains itself from an early age to be able to think about and use numbers, which allows our brain to be quick at encoding and decoding visual representation of numbers.
+It has also been shown that in Western cultures, people implicitly have a mental spatial representation of numbers that order small to large numbers from left to right.
+
+Some of our neurons are tuned to be simulated more by particular numbers.
+The time it takes for our brains to compare relative magnitudes of numbers increases as the distance between the numbers decreases, especially at very large or very small numbers. (Imagine comparing two decimals, or 1203019849382972732173 and 98734298374971323, it's not immediately obvious what number is bigger, whereas 5 vs 10 is very obvious.)
+
+Ranking numbers by magnitude seems to be different from cardinality and may involve overlapping circuitry.
+
+## Natural and Unnatural Numbers
+
+In mathematics, we take the natural numbers to be N, that is the set of "counting numbers"
+
+$${1,2,3,4,..}$$
+
+which is an infinite set of numbers
+Or perhaps we take $N_{0}$, which is the same set, but including 0 to be the set of natural numbers.
+
+We are very bad at understanding very large or very small numbers.
+
+
+### Imagining small numbers
+
+When trying to imagine fractions, we can run into some problems about how to properly visualize these.
+However, like we said before, there are problems as we get smaller fractions, for example representing $\frac{1}{500}$ isn't easy to do in a meaningful way.
+
+There are some decent ways of showing these fractions, such as using symbols relating to the data.
+For example, if we want to show the risk of doing X activity, we could use people as the "icon" of the data, and the number of people who (for example) die, in red or crossed out, and the rest are left alone.
+This helps a user visualize the real meaning of say 3 in 100 people die doing X activity.
+
+When using visual representations for showing small possibilities, it can still be useful to represent this data with normal visualizations, as you can really show the "smallness" of the possibility.
+For example, the chance of winning Lotto 6/49 is $\frac{1}{13,983,816}$ if we were to show someone the comparison of the one versus the remaining 13,983,815 possibilities, I believe it would really help show how small the number truly is.
+
+### Changing the Scale - By inversion
+
+Sometimes it is easier to represent very small numbers by using large numbers, and vice versa.
+
+When trying to visualize how unlikely it is to win the lottery, we can make the comparison between the probability and the number of years it would take to win given that probability.
+This allows us to measure how improbable it is using time as a scale, which can be more understandable, and easier to comprehend.
+
+In class we looked at an example that if we were to buy 114 Lotto 6/49 tickets per weekly draw, it would take us approximately 2,359 years on average to win.
+Showing this number helps fully demonstrate the improbability that is winning Lotto 6/49 to someone who might struggle to see how improbable it is.
+
+### Changing the Scale - By moving from probabilities to expectation
+
+Instead of looking at the probability of something, we can look at the expectation.
+
+For example, how much you spend, versus how much you can expect to win or lose per play.
+
+### Changing the Scale - Micromort
+
+Rescaling the changing units can work .. provided the new unit is meaningful.
+
+The communicate the risk of death, Ronald Howard (1970s) suggest a micromort as a meaningful unit of measurement for the probability of death.
+
+$$1 \text{ micromort} = \text{one-in-a-million chance of death}$$
+
+Or
+
+$$Pr(Death) = \frac{1}{1,000,000}=1 \text{ micromort}$$
+
+In England and Wales, out of 54 million people, only 18,000 died from external causes in 2008.
+This is a daily average of:
+
+$$\frac{18000}{54,000,000}x\frac{1}{365}=\frac{18,0000}{54*365}x \frac{1}{1,000,000} \approx 1 \text{ micromort}$$
+
+So based on this information, we deal with about 1 micromort of deadly risk every day without worry.
+
+Some examples:
+
+- The risk of dying from general anesthetic, is estimated to be about 1 in 100,000 or 10 micromorts.
+- Hang gliding is about 6 micromorts
+
+### Changing the Scale - Microlives
+
+Micromorts are units of probability (of death).
+As we did the lotteries we could switch to units of expectation, in this case expected lifetime.
+We introduce the microlife.
+
+**1 microlife is 30 minutes of expected lifetime**
+
+This allows use to measure chronic risks by the number of microlives they remove.
+
+For example, for a 30 year old man:
+
+- Smoking 2 cigarettes would cost 1 microlife
+- 2 pints of strong beer cost a microlife
+- Being 5kg overweight costs a microlife *everyday*
+
+### Conclusion
+
+Very large numbers and very small numbers do not come up much in simple societies; thus are in some sense, "unnatural".
+
+Beyond a certain number and smaller than a certain value, numbers become indistinguishable.
+Both of these magnitudes are difficult to visualize.
+
+# Seeing a Number
+
+We want to take a look at how easy (or hard) it might be to distinguish one number from another.
+We want to look how how different units of measurement, comparison methods, and a variety of other methods compare to one another, and what is easier for someone to accurately compare numbers.
+
+## Identity
+
+If all we want to do is tell is the different identity of things, then using categorical data makes this much easier.
+
+For Example:
+
+- Coin toss: heads, tails
+- Mammal species: Baboon, rat, dog, human, etc.
+- Person: Justin, Ameer, Ana, Andrew, Jacob
+
+Any set of visual representations will do, but some will be more effective than others.
+
+### Visual Representation
+
+We will investigate a few examples and discuss why certain methods are more effective than others.
+
+#### Lines
+
+Simple line combinations such as block letters can be useful, provided that the shapes are easily distinguishable.
+
+![](img/zeroDim/lt.png){width= 33%}
+
+In this picture we can see that it's not easy to quickly distinguish the L's from the T's, thus making the comparison between these two line combinations harder than normal.
+Also, there is added difficulty that comes from the shapes being rotated.
+
+#### Shapes
+
+![](img/zeroDim/shapes.png){width=33%}
+
+From this image we can see that it is also quite easy to differentiate between different shapes.
+It is much easier to tell the difference between the basic shapes than it is the more abstract shapes.
+
+Note that we are also able to easily still see the differences even when the shapes are rotated or smaller sizes, however this does add a bit to the complexity.
+
+#### Visual Location
+
+An often overlooked means of discriminating categories is simply placing each category in a different location spatially.
+
+![](img/zeroDim/place.png){width=33%}
+
+#### Names
+
+We are also able to represent data by certain names.
+This works decently well as we are all well versed in our own language, however, this can obviously cause problems for people who aren't English speaking.
+
+![](img/zeroDim/words.png){width=33%}
+
+#### Faces
+
+As humans, we are very good at differentiating faces (as this is an integral task to our survival early on was the ability to recognize faces).
+So we are able to tell differences in faces, and recognize unfamiliar faces.
+
+To pair this with data, we can assign any variate with a particular face, and thus we can recognize the amount of times a certain face tends to appear.
+
+Facial recognition happens very quickly within a certain region of the brain. 
+Moreover, there are neurons that fire much more frequently whenever we see a face.
+The more detail a face has (aka. the closer it looks to an actual face) the faster these neurons will fire.
+
+We are also pretty good at recognizing faces at any rotation.
+However, our brain focuses on different features of faces with different priorities.
+Because of this, our brain is able to construct faces out of things that are "close enough", thus we can see faces in anything that has features that could construct a face.
+
+![](img/zeroDim/obamaBush.png){width=33%}
+
+**This is a normal face of a combined face of Barrack Obama and George Bush**
+
+![](img/zeroDim/upsideDown.png){width=33%}
+
+**Here is the same face but upside down**
+
+![](img/zeroDim/messedUpFace.png){width=33%}
+
+**However, when we rotated it, we flipped a few things, we can see that we actually flipped the eyes, and mouth, however our brains fixed the image as our brain made it so that it would recognize it**
+
+#### Colour
+
+The human visual system is also very good at distinguishing colour.
+
+The human retina contains about 6 million colour photoreceptors called "cones", and about 120 million photoreceptors called "rods".
+
+##### Categories from Hues
+
+The safest colour use for identifying categories is to have each category be coloured with a different hue:
+
+![](img/zeroDim/hues.png){width=33%}
+
+However, there can be challenges in comparing hues that are very similar and not too close together.
+Because of this hues work best when there are few categories so that a wide range of colours can be chosen (i.e. the colours are very different)
+
+##### Rods
+
+- There are about 120 million rods in the human retina, which are distributed evenly throughout the retina
+- These rods are extremely light sensitive, so much so a single rod can detect a single photon of light.
+- The rods **do not** detect colour; instead they register the differences between light and dark
+- They provide us with most of our night vision, hence why we see more black and white during the nighttime
+
+##### Cones
+
+- There are about 6 million cones in the human retina which are concentrated near the fovea (focal point) in our eye
+- 3 different types of cones distinguish three different sets of electromagnetic wavelengths which roughly correspond to red, green, and blue)
+- Together they allow us to distinguish colours
+
+![](img/zeroDim/wavelengths.png){width=33%}
+
+Differences in the signal strength from the cones being stimulated help us to perceive different colours.
+Note that red sensitivity was the last to evolve.
+
+Deficiency in each colour (either cone, or pathway from cone):
+
+1. Protanopia - deficiency in perceiving 'red' light
+2. Deuteranopia - deficiency in perceiving 'green' light
+3. Tritanopia - deficiency in perceiving 'blue' light
+
+#### Colour Gradients
+
+Modern systems make it easy to introduce colour in all kinds of weird and wacky ways.
+
+For example, colour gradients are very popular amongst the naive.
+Here two different identities (categories) are distinguish simply by the direction of the gradient.
+
+Due to evolution, we generally perceive light to be coming from the top.
+This causes some gradients to appear concave and some to appear convex depending on the direction of the gradient.
+
+#### Saturation Changes
+
+Another way of distinguishing categories is through the saturation of a particular colour.
+This also helps to introduce a order to the colours, lighter can be seen as a lower number, and darker to be higher, or vice versa.
+
+However, one issue with this is that our brain interprets slight changes in saturation in a weird way.
+
+![](img/zeroDim/sat.png){width=33%}
+
+We can see that if we look at a particular bar, the left side of it looks darker, and the right side looks lighter.
+This is because our brain is subconsciously creating these differences due to the bars surrounding colours.
+This is called the **mach** effect.
+
+![](img/zeroDim/satDot.png){width=33%}
+
+We can see in this image that the dot on the left appears to be quite a bit lighter than the dot on the right, however, the dot is actually the same colour in all the boxes.
+The difference in saturation is a pure construct from our brain.
+
+![](img/zeroDim/colourTrick.png){width=33%}
+
+As we can see in this image, the square that A is in and the square that B is in look quite different on the left side, but when we compare these two, we can see that they are actually the exact same colour.
+This is an example of one of the "tricks" our mind plays to make sense of colour given it's surroundings.
+This is all constructed by our visual system, adjusting for the surrounding colours.
+
+These examples show us some of the issues of using saturation, as depending on the surrounding colours or light, two identical saturations can look quite different.
+
+This happens because our brain tries to see the same colour if it's in the shade or not (think about looking at an apple in a tree, versus on your counter, they appear to be the same colour, thanks to our brain's adjustments).
+
+## Magnitude
+
+ We are finally getting down to more what we mean by numbers - their magnitude.
+ For data, we need to be considering measurements, which will have arbitrary value of varying precision.
+
+ In either case, when a magnitude exists for each datum, interests lies in:
+
+ - Discriminating between the numbers
+ - Ranking the numbers
+ - Judging the relative size of the numbers
+  - For some purposes we might just need smaller than, much smaller than, the same, larger than and much larger than
+  - For others we might need to be able to tell the size of the difference
+  - We may also want to be able to find the ratio of the sizes
+  - for some we will want to be able to determine the actual magnitude of the values from the visualization.
+
+For what we have called "Natural Numbers", namely integers which are not too large as to be beyond comprehension, we have considered a number of ways to give them pictorial form.
+
+Our objective here is to think of some visual representations that will encode an arbitrary numerical value that is easily and reliably decoded.
+
+The visual representations used for categorical values that might also be used here include:
+
+1. Colour (hue, saturation, etc.)
+2. Shape (perhaps size of shape)
+3. Visual location
+
+Given our previous discussion on colours and the downfall of them, using colours for numerical values seems to be the least promising.
+
+### Order by Colour
+
+To be able to give colours a magnitude, we need to be able to use colours that give a sense of ordering.
+
+If representing a small set of numbers, we can use the saturation of a specific number, however, this would require a few categories as the more categories, the harder it will be to distinguish between the saturations.
+
+A divergent palette, or one with two different colours, can be used for values in which there is a natural origin or zero for the values 
+(think about using blue and red for temperature, where the middle (white/grey) represents 0).
+This effectively doubles the amount of values that we can order.
+
+### Continuous Scale by Colour
+
+![](img/zeroDim/contScaleColour.png){width=33%}
+
+Using this type of scale works if the values are continuous and change along the scale.
+But this becomes less effective if the values hop all over the scale.
+
+A serious problem with this solution is how to calibrate our perception of the value, and if our perception of the value changes with the actual change in saturation.
+Is this relationship linear?
+
+Psychophysical studies show that when dealing with the senses (including sight) that the perceived intensity of the stimulus is **not** always linear with the magnitude of the physical stimulus.
+
+### By Area
+
+Another possible magnitude comparison is the size of an object.
+We can take a look at shapes and order them by their area.
+The only problem with this is that if we use different shapes, it becomes very difficult to interpret the area differences between odd shapes.
+Thus to be able to use area, we would need to use the same shape to make it more effective.
+
+### By Length
+
+We can encode values as lengths of an object (say just a line).
+Comparing lengths of lines is very easy when all of the lines are lined up with one another (all start at the same point), however comparing these lengths becomes much harder when we are given these lines in random rotations and position.
+
+![](img/zeroDim/lengthLines.png){width=33%}
+
+### By Position
+
+We can compare the magnitude of items by positioning them on some scale. 
+However, if the scales aren't aligned or evenly sized, then this can cause more problems than solutions.
+
+![](img/zeroDim/position.png){width=33%}
+
+### By Slope
+
+We can think of the magnitude of a number by the slope of a line.
+Again, this works well if the lines all start from the same x point, however, if the lines are scattered about, it would be hard to compare very similar slopes as you can't judge their angle from an axis.
+
+![](img/zeroDim/slope.png){width=33%}
+
+### By Angle
+
+We can compare the magnitude of items by an angle between two lines.
+We have to account for if we allow an angle larger than $90^{\circ}$
+
+![](img/zeroDim/angle.png){width=33%}
+
+### By Volume
+
+We can also encode magnitude as volumes.
+As mentioned with areas, this will be much more effective if we only have to compare the volumes of similar shapes as comparing the volumes of shapes, especially those that are abstract, will add (possibly) too much complexity.
+
+![](img/zeroDim/volumes.png){width=33%}
+
+## Perceptual "Laws"
+
+### Perceived Magnitude
+
+Psychophysical researchers have tried to relate a physical stimulus of measured magnitude to intensity of the stimulus as perceived by the person receiving it.
+For example, weight, sound and size as perceived by the corresponding senses
+
+They have discovered "laws" empirically by experimentation.
+These laws were found by finding consistency in results for different senses, there is some variation across individuals, but an average between samples can be used.
+
+Of interest here are those which relate the "visual magnitude" perceived by viewers of the various visual representation of numbers.
+
+### Weber's Law
+
+Let
+
+- $x$ denote the physical magnitude of a stimulus
+- and $w_{p}(x) > 0$ be such that
+  - $x+w_{p}(x)$ is perceived to be larger than $x$ with probability $p$
+
+Then **Weber's law** states that
+
+$$w_{p}(x) = k_{p}x$$
+
+where $k_{p}$ does not depend on $x$, but only on $p$ (presumably increasing with $p$), and of course the type of stimulus.
+
+This suggests that what really matters is proportional change, in that
+
+$$\frac{x+w_{p}(x)}{x}=1+\frac{w_{p}(x)}{x}=1+k_{p}$$
+
+It seems to make sense for visually determining length
+
+E.g. it says that it is easier to detect that a 2.5cm line is longer than a 2.0cm line than it is to detect that a 20.5cm line is longer than a 20.0cm line.
+
+- Namely, the first is 25\% longer; the second is only 2.5\% longer.
+
+See also [Weber-Fechner law](https://en.wikipedia.org/wiki/Weber%E2%80%93Fechner_law)
+
+**Example**
+
+Comparing lengths of rectangles.
+
+Which rectangle is longer A or B?
+
+![](img/zeroDim/weberRec1.png){width=33%}
+
+They are near each other in length so their proportional difference is small, so it's hard to tell the difference.
+
+![](img/zeroDim/weberRec2.png){width=33%}
+
+Comparing this seems easier.
+This is because by framing the two rectangles, we can see the remainder in the frames, which have a greater proportional difference.
+
+Using framed rectangles should be (and is) much easier according to Weber's law.
+
+### Stevens' Law
+
+A person perceived magnitude of a stimulus of magnitude $x$ is
+
+$$p(x)=cx^{\beta}$$
+
+*Sometimes called Stevens's power law*
+
+Seems to work well on a wide variety of perceived scales, including:
+
+- Length: $0.9 \leq \beta \leq 1.1$
+- Area: $0.6 \leq \beta \leq 0.9$
+- Volume: $0.5 \leq \beta \leq 0.8$
+
+All values are empirically determined. There is a person to person variation
+
+Consider visually comparing two areas of size $a$ and $b$.
+And suppose that $\beta =0.7$ (which has been observed empirically).
+
+Then, according to Stevens' law, the ratio of the areas will be perceived to be:
+
+$$(\frac{a}{b})^{0.7}$$
+
+instead of of (a/b).
+
+Example 2: 
+
+Suppose objects of area 2,4, and 8 were being compared visually, then the perceived ratio of the first to the second would be:
+
+$$(\frac{2}{4})^{0.7}\approx 0.62$$
+
+instead of 0.5, and the perceived ratio of the third to the second will be
+
+$$(\frac{8}{4})^{0.7}\approx 1.62$$
+
+instead of 2.
+
+Small areas are perceived to be larger than they are; large areas smaller.
+
+It's even worse for volumes.
+
+This suggests an ordering for visual representation of magnitudes.
+If we are looking at visually encoding a magnitude $x$, then using length has a smaller bias than area, which in turn has a smaller bias than using volume.
+
+If the variability in perception is the same for each, then we should expect a decreasing accuracy in encoding from length to area to volume.
+
+### Graphical Perception
+
+In a series of experiments, Cleveland and McGill investigated the quality of a variety of different encodings for magnitude.
+One such series considered
+
+- Angle
+- Area
+- Position along a common scale
+- Position along identical but nonaligned scales
+- Length
+- and slope
+
+Cleveland's experiments in graphical perception from *Theory of visual perception* suggest that the following ordering for visual representation are from most accurate to least accurate:
+
+1. Position along a common scale
+2. Position on identical but nonaligned scales
+3. Lengths
+4. Angle/Slope
+5. Area
+6. Volume
+7. Colour density, colour saturation
+8. Colour hue
+
+Note: this ordering is tentative/suggestive, as opposed to definitive.
+More research is required.
+
+## Magnitude Continued
+
+## Labels
+
+Missing from the list of graphical perception rankings is the use of labels.
+Provided that there are not too many labels, they were observed to to work well with categorical data.
+Because of how simply they are read, using the number itself instead of the number's word would probably be the most accurate for decoding.
+
+![](img/zeroDim/numCompare.png){width=50%}
+
+We can see from this graphic the different ways we can organize numbers in a vertical matter.
+Which column seems the easiest to compare?
+
+We can see that the right, decimal aligned, and rounded right-aligned columns are the easiest.
+Regular right aligned suffers from decimals as it doesn't allow us to just look at a column to compare the corresponding values (ex. 10's column, 100's column, etc).
+When we look at decimal aligned, it becomes very easy to compare numbers as we can just look down the column to find the largest numbers.
+Similarly for rounded numbers, we don't need to worry about decimals, and we get the same column scanning bonus that we had in decimal aligned.
+
+If we consider comparing numbers that are laid out horizontally, the easiest way for us to do this would be sort them in ascending order from left to right.
+The reason why doing this is the easiest for us is because our reading goes from left to right, and reading numbers in ascending order is the most natural to us.
+
+Conversely, if we are looking at ordered numbers that are vertical, naturally we would want numbers to be descending from top to bottom.
+This is again more natural for us as we associate a number being higher up in an order to be larger.
+Also, when we think about subtraction, descending follows how we would have learned subtraction in school.
+
+## Modern Numerals
+
+Some important characteristics of modern numerals are as follows:
+
+1. Fixed and small base.
+  - There are few characters in our number system to learn, we just need to know 0-9
+  - Other bases (we use base 10) might be better, Babylonians use base 60
+2. Positional
+  - Each character encodes values
+  - Position encodes magnitude
+3. Standardized size and layout
+  - Align in columns
+  - Sequences separate in groups of 3's (1,000, 1,234,567)
+
+
+# Tables
+
+Tables are used for records, and visual aids to reasoning. The former is more prevalent, but the second is more important.
+
+Like the other layouts that we discussed tables should take advantage of the visual characteristics of the digits they display.
+
+## Example: Acidity of Ontario Lakes
+
+![](img/zeroDim/firstTable.png){width=50%}
+
+There are a few takeaways from this table.
+
+1. Rows ordered alphabetically by "County or District"
+2. There is a lot of redundant information in the table
+3. It is quite difficult to see any patterns in the table.
+
+![](img/zeroDim/secondTable.png){width=50%}
+
+To improve on the previous table, here we arranged the Counties or Districts by region, and we removed some uninteresting redundant information.
+
+![](img/zeroDim/thirdTable.png){width=50%}
+
+In this table instead of organizing by region, we can arrange by acidity.
+
+![](img/zeroDim/fourthTable.png){width=50%}
+
+We can further remove redundancy, and annotate the table.
+
+## Conveying Information Visually
+
+Modern tables are no longer needed to be used for record, as databases are better for this. 
+Instead tables should be displayed as visual aids to help reasoning.
+
+Like other layouts of numbers, tables should take advantage of the visual characteristics of the digits they display. They should:
+
+- Take advantage of rows
+- Align digits in columns
+- Show important individual numbers
+- Use white space to separate groups of numbers
+- Really think about the information to be communicated and make sure that the table displays that
+
+## Analysis
+
+We can consider the following table of sales data
+
+![](img/zeroDim/salesTable1.png){width=50%}
+
+**Analysis:**
+
+- Goal is to see some patterns in the data
+- Develop a summary description ("model") for the pattern
+- Asses the agreement of the pattern with the data.
+
+**Step 1:**
+
+We can separate the row and column headings to help us distinguish headings from data, also to add more visual space to improve readability.
+
+We can also add more meaningful labels to our headings based on the information we know about our data (we know that A, B, C and D are areas north, south, east, and west, and the ranges as our column headers are time frames for quarters.)
+
+These changes produce the following table:
+
+![](img/zeroDim/salesTable2.png){width=50%}
+
+We also added some gridlines to help separate years and define the table.
+
+**Step 2:**
+
+For now we will focus on the 1969 data.
+
+We can reduce to significant digits.
+
+*Note:* it is a common mistake to present too many digits, be wary of this for your own tables.
+
+If there are too many digits (> 3) it might be worthwhile to change the unit of measurement (i.e. thousands of dollars versus dollars).
+
+![](img/zeroDim/salesTable3.png){width=50%}
+
+### On Significant Digits
+
+Because we are trying to look for patterns in the table, reducing to "significant" digits may not always mean the usual "scientifically significant digits". 
+For example, if the table had looked like:
+
+![](img/zeroDim/sigDigits.png){width=50%}
+
+We would still have the table above.
+The reason for this is because all the numbers in our example were prefixed with 1,234,500, and the only differences lied in the 10s and 1s columns. 
+Thus to look for differences in these values we would want to investigate only these numbers.
+Thus we would subtract 1,234,500 from all of the numbers to arrive at the same table we had before.
+
+**Step 3:**
+
+Looking for patterns we can get the column and row sums.
+However, this gives us values that are of a different magnitude than our data, and doesn't really help use draw many conclusions.
+
+![](img/zeroDim/salesTable4.png){width=50%}
+
+**Step 4:**
+
+Instead of using the sums, we can use the averages of the columns and the rows to get a measure of location.
+
+![](img/zeroDim/salesTable5.png){width=50%}

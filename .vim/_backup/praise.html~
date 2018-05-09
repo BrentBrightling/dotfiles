@@ -1,0 +1,64 @@
+<div id="praise">
+  <div class="textContainer bottom-margin">
+    <h2>Praise</h2>
+    <p>Don't just take our word for it, take the word of our happy customers!</p>
+  </div>
+  <div class="grid-container">
+    <div class="grid">
+      <div class="grid-item">
+        <div class="inner">
+          <p>Not only were they friendly, proffessional, and timely with their responses but they did an absolutely incredible job with the decor for our wedding. All of our guests went on and on about how beautifully decorated our venue was. I did not have to worry about a single thing decor-wise on my big day. They took care of everything and went above and beyond.
+          </p>
+          <strong>Michelle</strong>
+        </div>
+      </div>
+      <div class="grid-item">
+        <div class="inner">
+          <p>
+          I still remember my day and one of the highlights was the way our room looked. It lit up and is a memory in ours and our guests' minds! They did an amazing job. They follow your dreams and make them a reality! They are professional and very easy to work with. Their mission is to make you happy! I recommend them without hesitation!!! I love them and their work!
+          </p>
+          <strong>Shireen</strong>
+        </div>
+      </div>
+      <div class="grid-item">
+        <div class="inner">
+          <p>My wife and I have used Ray &amp; Rose for all of our milestone events. It started with our bridal shower, then wedding and both of our children's baptisms. When we first decided to use them, we had asked them the reason for the name Your Occasions. The response was fantastic. "It is truly Your Occasion. Our goal is to bring to the light your vision for your special day and help create the right mood and atmosphere for you and your guests". Boy do they deliver and then some! They are both very friendly, attentive to your needs and ask lots of questions to help formulate many options and suggestions. Their experience and talent has shined through every time! Thank you for all the great work. I highly recommend Your Occasions and their quality of work.
+          </p>
+          <strong>Nick</strong>
+        </div>
+      </div>
+      <div class="grid-item">
+        <div class="inner">
+          <p>Your Occasions decorated for my wedding shower and my wedding reception at Paramount Conference Centre. Their work was amazing and exactly what we wanted. They worked with our budget and provided us with some great ideas. Three years later, we had them decorate for our son's baptism...they created a beautiful beach theme with sand, seashells and netting...everyone loved it! I recommend them for any occasion.
+          </p>
+          <strong>Maria</strong>
+        </div>
+      </div>
+      <div class="grid-item">
+        <div class="inner">
+          <p>This holiday season Ray and his team did another spectacular job at our restaurant. Always original, always fresh - not to mention on-time and on- budget. Can't wait to see what they'll come up with for Saint Paddy's day. 
+
+          Thanks again</p>
+          <strong>Chris</strong>
+        </div>
+      </div>
+      <div class="grid-item">
+        <div class="inner">
+          <p>Who can transform a regular space into a vision of what you want... Ray and Rose! 
+          Got married two years ago At Tappo Restaurant and that place was transformed twice in a matter of hours. Once for the wedding, and once for the reception. We didn't have to worry about a thing, and the place was magically transformed into an enchanted space that has people commenting to this day when they see our photos. They did such a good job that they were hired by the Restaurant owners to decorate for their Holiday season during the Christmas Market. Reserve with confidence knowing it will all be taken care of in a respectful and personable manner, honestly... and at great reasonable prices!!</p>
+          <strong>Enzo</strong>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="badges">
+  <div id='es-recobadge-content'></div><script type='text/javascript'>(function (d, s, id, lstId) {var js, fjs = d.getElementsByTagName(s)[0], p = window.location.origin;if (!d.getElementById(id)) { js = d.createElement(s);js.id = id;js.src = 'https://www.eventsource.ca/Widgets/Reviews/ReviewsBadge.ashx?id=' + lstId;fjs.parentNode.insertBefore(js, fjs);}})(document, 'script', 'es-recobadge-script', 5770);</script>
+  <div id='es-trb'>
+    <a href="https://www.eventsource.ca/your-occasions#details-reviews"><img src="assets/img/es-tca2017.png" alt="Event Source Toronto Choice Awards Badge"></a>
+  </div>
+  </div>
+  <div class="textContainer top-margin">
+    <h2>Want to see more?</h2>
+    <p>Check our our <a href="https://www.eventsource.ca/your-occasions">Event Source Page</a> to see all of our reviews!</p>
+  </div>
+</div>

@@ -1,0 +1,34 @@
+# Lines configured by zsh-newuser-install
+HISTFILE=~/.histfile
+HISTSIZE=1000
+SAVEHIST=1000
+bindkey -e
+# End of lines configured by zsh-newuser-install
+# The following lines were added by compinstall
+zstyle :compinstall filename '/home/tubee/.zshrc'
+
+autoload -Uz compinit
+compinit
+# End of lines added by compinstall
+source $HOME/antigen.zsh
+
+antigen use oh-my-zsh
+
+antigen bundle git
+
+    # Syntax highlighting bundle.
+antigen bundle zsh-users/zsh-syntax-highlighting
+
+    # Fish-like auto suggestions
+antigen bundle zsh-users/zsh-autosuggestions
+
+    # Extra zsh completions
+antigen bundle zsh-users/zsh-completions
+
+antigen theme desyncr/void void
+
+# Tell antigen that you're done
+antigen apply
+
+alias ls=ls
+alias tmux=tmux -2
