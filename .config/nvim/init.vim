@@ -13,6 +13,10 @@ call vundle#begin()
   "Plugin 'itchyny/lightline.vim'
   Plugin 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
   Plugin 'junegunn/fzf.vim'
+  Plugin 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+  Plugin 'w0rp/ale'
+
+
   " Language Support
   
 
@@ -28,6 +32,7 @@ call vundle#end()            " required
 filetype plugin indent on    " required
 syntax enable
 
+let g:deoplete#enable_at_startup = 1
 
 " Move swap files
 set dir=~/.vim/_swap/
@@ -61,10 +66,16 @@ set t_ut=
 "colorscheme luna-term
 colorscheme yowish
 
-"let g:airline#extensions#tabline#enabled = 1
-"let g:airline#extensions#tabline#fnamemod = ':t'
-"let g:airline_powerline_fonts = 1
+let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#fnamemod = ':t'
+let g:airline_powerline_fonts = 1
 
+let g:python3_hose_prog = '/usr/local/bin/python3'
+
+let g:ale_echo_cursor = 1
+let g:ale_lint_on_save = 1
+let g:ale_lint_on_text_change = "never"
+let g:ale_lint_on_insert_leave = 1
 
 "Lightline
 set laststatus=2
@@ -72,9 +83,9 @@ if !has('gui_running')
   set t_Co=256
 endif
 set noshowmode
-let g:lightline = {
-  \ 'colorscheme': 'yowish',
-  \}
+"let g:lightline = {
+"  \ 'colorscheme': 'yowish',
+"  \}
 
 nmap <silent> <C-t> :NERDTreeToggle<CR>
 
@@ -91,7 +102,6 @@ command! -bang -nargs=* Find call fzf#vim#grep('rg --column --line-number --no-h
 command! -bang -nargs=* Find call fzf#vim#grep('rg --column --line-number --no-heading --fixed-strings --ignore-case --no-ignore --hidden --follow --glob "!.git/*" --color "always" '.shellescape(<q-args>).'| tr -d "\017"', 1, <bang>0)
 
 " Guides
-"
 inoremap <Space><Space> <Esc>/<++><Enter>"_c4l
 vnoremap <Space><Space> <Esc>/<++><Enter>"_c4l
 map <Space><Space> <Esc>/<++><Enter>"_c4l
