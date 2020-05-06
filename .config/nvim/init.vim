@@ -14,7 +14,6 @@ call vundle#begin()
   "Plugin 'itchyny/lightline.vim'
   Plugin 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
   Plugin 'junegunn/fzf.vim'
-  Plugin 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
   Plugin 'w0rp/ale'
   Plugin 'tpope/vim-fugitive'
   Plugin 'easymotion/vim-easymotion'
@@ -27,6 +26,8 @@ call vundle#begin()
   Plugin 'vim-ruby/vim-ruby'
   Plugin 'mxw/vim-jsx'
   Plugin 'pangloss/vim-javascript'
+
+  Plugin 'neoclide/coc.nvim', {'branch': 'release'} 
 
   Plugin 'tpope/vim-commentary'
   Plugin 'vim-pandoc/vim-pandoc'
